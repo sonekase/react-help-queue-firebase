@@ -1,9 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function Ticket(props){
   return(
     <div>
+      <style global jsx>{`
+          div {
+            background-color: red;
+          }
+        `}</style>
       <h3>{props.location} - {props.name}</h3>
       <p><em>{props.issue}</em></p>
       <hr/>
@@ -12,8 +17,8 @@ function Ticket(props){
 }
 
 Ticket.propTypes = {
-  names: PropTypes.string.isRequired,
-  locaiton: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
   issue: PropTypes.string
 };
 
